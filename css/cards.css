@@ -1,0 +1,10 @@
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  /* Patch for CodePen only */
+  .uk-cover-container img {
+    object-fit: cover;
+  }
+  
