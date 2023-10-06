@@ -11,7 +11,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = firebase.initializeApp(firebaseConfig); // Fixed typo in initializeApp
-const auth = firebase.auth();
+
 const database = firebase.database();
 
 // Function to register a user

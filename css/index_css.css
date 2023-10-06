@@ -388,3 +388,88 @@
     font-weight:600
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Adjust this part of your existing CSS */
+
+/* Menu Toggle Styles */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 11;
+}
+
+.bar {
+  height: 3px;
+  width: 25px;
+  background-color: #fff;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+/* Initially hide the navigation links */
+.nav-tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  color: #03dac6;
+  letter-spacing: 0.1rem;
+  transition: all 0.5s ease;
+  font-size: 2vw;
+}
+
+/* Show the navigation links when the menu is open */
+.nav-container.menu-open .nav-tab {
+  display: none;
+}
+
+/* Adjust the styles when the menu is open */
+.nav-container.menu-open .menu-toggle .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.nav-container.menu-open .menu-toggle .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-container.menu-open .menu-toggle .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Media Query for Small Screens (e.g., Mobile) */
+@media (max-width: 767px) {
+  .menu-toggle {
+    display: block;
+    background: #1e1f26; /* Add this line to set background color */
+  }
+
+  .nav-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .nav-tab {
+    display: none;
+  }
+
+  .nav-container.menu-open .nav-tab {
+    display: flex;
+  }
+}
